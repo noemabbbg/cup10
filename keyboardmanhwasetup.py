@@ -14,5 +14,7 @@ clava18.insert(hent1)
 clavaTOP = InlineKeyboardMarkup(row_width=1)
 
 GreenLight=InlineKeyboardButton(text="Под зеленым светом", callback_data="GreenLight")
+BjAlex=InlineKeyboardButton(text="Bj Alex", callback_data="BjAlex")
 clavaTOP.insert(GreenLight)
+clavaTOP.insert(BjAlex)
 clavaTOP.insert(btnreturnmenu)
