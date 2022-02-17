@@ -360,7 +360,21 @@ async def process_video_command(call: CallbackQuery):
     buffer=1
     db.addbuffer(call.from_user.id, buffer)
 
-
+@dp.callback_query_handler(text_contains="BjAlex")
+async def process_video_command(call: CallbackQuery):
+    await call.answer(cache_time=60)
+    callback_data = call.data
+    logging.info(f"callback_data='{callback_data}'")
+    if check_sub_channel(await bot.get_chat_member(chat_id=channel_id, user_id=call.from_user.id)):
+        await bot.delete_message(call.from_user.id, call.message.message_id)
+        await bot.send_photo(call.from_user.id, caption='*Описание:* \nНам Дон Гюн является истинным фанатом. Он безвозвратно влюбился в BJ Алекса, который транслирует порно для геев. Каждый раз смотря, как он мастурбирует во время своей трансляции, Нам Дон Гюн фантазирует о сексе с ним… Однажды он замечает у популярного президента студсовета Ан Джи Вона такое же, как у Алекса, пятно на животе в форме бабочки. Воплотятся ли его фантазии в реальность?\n*Оценка на мангалибе: 4.86*\n ', photo="AgACAgIAAxkDAAPPYg6ndFTDu2wk_mnbJqEX5u6xSBkAAhC5MRtH43hIzVBGcRRKxXEBAAMCAAN4AAMjBA", reply_markup=clavaChangeState, parse_mode="Markdown")
+        #await call.message.answer(text='*Описание:* \nЯ стала злодейкой любовного романа. Думаете, меня что-то не устраивает? Нет, всё просто прекрасно. Статус дочери герцога даёт возможность жить в роскоши и комфорте, и я собираюсь извлечь всю выгоду из своего нынешнего положения. Но, хотя я не хочу идти по пути антагонистки, белой и пушистой тоже не буду. Мой жених изменил мне с главной героиней, поэтому я перепишу оригинальную историю и поставлю всех на колени. Эти ублюдки не стоят моих слёз. \n*оценка на мангалибе: 4.83*', reply_markup=clavaChangeState, parse_mode="Markdown")
+        
+    else:
+        await bot.delete_message(call.from_user.id, call.message.message_id)
+        await call.bot.send_message(call.from_user.id, 'Для просмотра сначала подпишись на канал', reply_markup=checkSubm)
+    buffer=2
+    db.addbuffer(call.from_user.id, buffer)
 
 #####блок callbackov манхв конец#####
 
