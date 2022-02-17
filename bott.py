@@ -25,7 +25,7 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
 from manhwaclass import stateManhwa, is_number
 import dictant
-from dictant import Herokiller, Maindict, SuicideBoy
+from dictant import Maindict
 import os
 from mysql.connector import MySQLConnection
 from aiogram_broadcaster import TextBroadcaster
