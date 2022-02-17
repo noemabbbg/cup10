@@ -3,7 +3,7 @@ import sqlite3
 import sys
 import array
 
-from dictant import SuicideBoy
+
 
 
 
