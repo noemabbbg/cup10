@@ -376,6 +376,55 @@ async def process_video_command(call: CallbackQuery):
     buffer=2
     db.addbuffer(call.from_user.id, buffer)
 
+@dp.callback_query_handler(text_contains="VrataAda")
+async def process_video_command(call: CallbackQuery):
+    await call.answer(cache_time=60)
+    callback_data = call.data
+    logging.info(f"callback_data='{callback_data}'")
+    if check_sub_channel(await bot.get_chat_member(chat_id=channel_id, user_id=call.from_user.id)):
+        await bot.delete_message(call.from_user.id, call.message.message_id)
+        await bot.send_photo(call.from_user.id, caption='*Описание:* Шокирующий способ открыть врата в Ад! Когда всё получится, вам понравится, но войдя туда, вас это не порадует.\n\n*Оценка на мангалибе: 4.92*\n ', photo="AgACAgIAAxkDAAID-2ISp4Zc2kNJfJpnAWOAkX5b2lg5AALsuTEb8qiRSCiSuHcktCW3AQADAgADeAADIwQ", reply_markup=clavaChangeState, parse_mode="Markdown")
+        #await call.message.answer(text='*Описание:* \nЯ стала злодейкой любовного романа. Думаете, меня что-то не устраивает? Нет, всё просто прекрасно. Статус дочери герцога даёт возможность жить в роскоши и комфорте, и я собираюсь извлечь всю выгоду из своего нынешнего положения. Но, хотя я не хочу идти по пути антагонистки, белой и пушистой тоже не буду. Мой жених изменил мне с главной героиней, поэтому я перепишу оригинальную историю и поставлю всех на колени. Эти ублюдки не стоят моих слёз. \n*оценка на мангалибе: 4.83*', reply_markup=clavaChangeState, parse_mode="Markdown")
+        
+    else:
+        await bot.delete_message(call.from_user.id, call.message.message_id)
+        await call.bot.send_message(call.from_user.id, 'Для просмотра сначала подпишись на канал', reply_markup=checkSubm)
+    buffer=3
+    db.addbuffer(call.from_user.id, buffer)
+
+@dp.callback_query_handler(text_contains="TigerLun")
+async def process_video_command(call: CallbackQuery):
+    await call.answer(cache_time=60)
+    callback_data = call.data
+    logging.info(f"callback_data='{callback_data}'")
+    if check_sub_channel(await bot.get_chat_member(chat_id=channel_id, user_id=call.from_user.id)):
+        await bot.delete_message(call.from_user.id, call.message.message_id)
+        await bot.send_photo(call.from_user.id, caption='*Описание:* Квак Тхебом — член национальной сборной по стрельбе из оружия, золотой медалист олимпийских игр. Но несмотря на идеальную жизнь, Тхебома сбивает машина, а виновник скрывается с места преступления. Первое, что видит наш бедняга после того, как приходит в чувства — «высокого дядю» Ру Нейтана, который скрывает свою личность. Но на самом деле «дядя»…вампир?!\n\n*Оценка на мангалибе: 4.6*\n ', photo="AgACAgIAAxkDAAID-GISp4W5QaWC4iXOLwh8TMGbp6oYAALpuTEb8qiRSNCoHusj7kJqAQADAgADeAADIwQ", reply_markup=clavaChangeState, parse_mode="Markdown")
+        #await call.message.answer(text='*Описание:* \nЯ стала злодейкой любовного романа. Думаете, меня что-то не устраивает? Нет, всё просто прекрасно. Статус дочери герцога даёт возможность жить в роскоши и комфорте, и я собираюсь извлечь всю выгоду из своего нынешнего положения. Но, хотя я не хочу идти по пути антагонистки, белой и пушистой тоже не буду. Мой жених изменил мне с главной героиней, поэтому я перепишу оригинальную историю и поставлю всех на колени. Эти ублюдки не стоят моих слёз. \n*оценка на мангалибе: 4.83*', reply_markup=clavaChangeState, parse_mode="Markdown")
+        
+    else:
+        await bot.delete_message(call.from_user.id, call.message.message_id)
+        await call.bot.send_message(call.from_user.id, 'Для просмотра сначала подпишись на канал', reply_markup=checkSubm)
+    buffer=4
+    db.addbuffer(call.from_user.id, buffer)
+
+
+@dp.callback_query_handler(text_contains="Killstalker")
+async def process_video_command(call: CallbackQuery):
+    await call.answer(cache_time=60)
+    callback_data = call.data
+    logging.info(f"callback_data='{callback_data}'")
+    if check_sub_channel(await bot.get_chat_member(chat_id=channel_id, user_id=call.from_user.id)):
+        await bot.delete_message(call.from_user.id, call.message.message_id)
+        await bot.send_photo(call.from_user.id, caption='*Описание:*Юн Бум одержим своим однокурсником О Сану и везде тайно за ним следует. Однако у Сану есть маленький секрет, и когда Юн Бум случайно его раскрывает... его жизнь подвергается настоящей опасности! \n\n*Оценка на мангалибе: 4.49*\n ', photo="AgACAgIAAxkDAAID-WISp4VhenAk13_ZLnl2UF2Ihh_3AALquTEb8qiRSIN7gpJ69mTIAQADAgADeAADIwQ", reply_markup=clavaChangeState, parse_mode="Markdown")
+        #await call.message.answer(text='*Описание:* \nЯ стала злодейкой любовного романа. Думаете, меня что-то не устраивает? Нет, всё просто прекрасно. Статус дочери герцога даёт возможность жить в роскоши и комфорте, и я собираюсь извлечь всю выгоду из своего нынешнего положения. Но, хотя я не хочу идти по пути антагонистки, белой и пушистой тоже не буду. Мой жених изменил мне с главной героиней, поэтому я перепишу оригинальную историю и поставлю всех на колени. Эти ублюдки не стоят моих слёз. \n*оценка на мангалибе: 4.83*', reply_markup=clavaChangeState, parse_mode="Markdown")
+        
+    else:
+        await bot.delete_message(call.from_user.id, call.message.message_id)
+        await call.bot.send_message(call.from_user.id, 'Для просмотра сначала подпишись на канал', reply_markup=checkSubm)
+    buffer=5
+    db.addbuffer(call.from_user.id, buffer)
+
 #####блок callbackov манхв конец#####
 
 
