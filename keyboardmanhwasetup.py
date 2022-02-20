@@ -1,61 +1,31 @@
 from aiogram.types import ReplyKeyboardRemove, \
     ReplyKeyboardMarkup, KeyboardButton, \
     InlineKeyboardMarkup, InlineKeyboardButton
-
-
-
-
-
-
-clava = InlineKeyboardMarkup(row_width=1)
 btnreturnmenu=InlineKeyboardButton(text='вернуться в меню', callback_data='returnMenu')
-buy_pear1 = InlineKeyboardButton(text="доступные манхвы", callback_data="топ")
-buy_pear13=InlineKeyboardButton(text="манхвы 18+", callback_data="18+")
-buy_pear15=InlineKeyboardButton(text="управление подпиской", callback_data="subscribemanagment")
-clava.insert(buy_pear1)
-#clava.insert(buy_pear13)
-#clava.insert(buy_pear15)
 
 
 
 
+clava18=InlineKeyboardMarkup(row_width=5)
+buy_pear2 = InlineKeyboardButton(text="убийца героев", callback_data="HeroKiller")
+hent1 = InlineKeyboardButton(text="я забыл название но оно работает", callback_data="хент1")
+clava18.insert(hent1)
+
+clavaTOP = InlineKeyboardMarkup(row_width=1)
+
+GreenLight=InlineKeyboardButton(text="Под зеленым светом", callback_data="GreenLight")
+BjAlex=InlineKeyboardButton(text="Bj Alex", callback_data="BjAlex")
+##########
+
+VosHoz=InlineKeyboardButton(text="Воспитание хозяина", callback_data="VosHoz")
+VrataAda=InlineKeyboardButton(text="Врата Ада", callback_data="VrataAda")
+TigerLun=InlineKeyboardButton(text="Тигр, проглотивший луну", callback_data="TigerLun")
+Killstalker=InlineKeyboardButton(text="Убить сталкера", callback_data="Killstalker")
 
 
-clavaChangeState=InlineKeyboardMarkup(row_width=1)
-buy_pear5 = InlineKeyboardButton(text="начать читать с начала", callback_data="начать с начала")
-buy_pear6 = InlineKeyboardButton(text="я знаю с какой главы хочу читать", callback_data="поиск главы")
-subscribe = InlineKeyboardButton(text="подписаться на выход новой главы", callback_data="subscribeNew")
-download=InlineKeyboardButton(text="прислать все главы сразу", callback_data="download")
-clavaChangeState.insert(buy_pear5)
-clavaChangeState.insert(buy_pear6)
-clavaChangeState.insert(subscribe)
-#clavaChangeState.insert(download)
-clavaChangeState.insert(btnreturnmenu)
-
-
-
-nextchapter=InlineKeyboardMarkup(row_width=1)
-buy_pear7 = InlineKeyboardButton(text="next", callback_data="next")
-buy_pear8 = InlineKeyboardButton(text="найти другую главу", callback_data="поиск главы")
-nextchapter.insert(buy_pear7)
-nextchapter.insert(buy_pear8)
-nextchapter.insert(btnreturnmenu)
-
-
-
-checkSubm=InlineKeyboardMarkup(row_width=1)
-btnurlchannel= InlineKeyboardButton(text='подписаться', url='https://t.me/manhwastorage')
-btndonesub=InlineKeyboardButton(text='я подписался', callback_data='саб')
-checkSubm.insert(btnurlchannel)
-checkSubm.insert(btndonesub)
-
-
-cancelsub=InlineKeyboardMarkup(row_width=1)
-btncancel=InlineKeyboardButton(text="отменить?", callback_data="cancelmanhwasub")
-cancelsub.insert(btncancel)
-cancelsub.insert(btnreturnmenu)
-
-
-
-returN=InlineKeyboardMarkup(row_width=1)
-returN.insert(btnreturnmenu)
+clavaTOP.insert(GreenLight)
+clavaTOP.insert(BjAlex)
+clavaTOP.insert(VrataAda)
+clavaTOP.insert(TigerLun)
+clavaTOP.insert(Killstalker)
+clavaTOP.insert(btnreturnmenu)
