@@ -21,11 +21,12 @@ VosHoz=InlineKeyboardButton(text="Воспитание хозяина", callback
 VrataAda=InlineKeyboardButton(text="Врата Ада", callback_data="VrataAda")
 TigerLun=InlineKeyboardButton(text="Тигр, проглотивший луну", callback_data="TigerLun")
 Killstalker=InlineKeyboardButton(text="Убить сталкера", callback_data="Killstalker")
-
+Trap=InlineKeyboardButton(text="Ловушка", callback_data="Trap")
 
 clavaTOP.insert(GreenLight)
 clavaTOP.insert(BjAlex)
 clavaTOP.insert(VrataAda)
 clavaTOP.insert(TigerLun)
 clavaTOP.insert(Killstalker)
+clavaTOP.insert(Trap)
 clavaTOP.insert(btnreturnmenu)
